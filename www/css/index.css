@@ -1,0 +1,125 @@
+.video-container, body {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -10;
+    overflow: hidden;
+  }
+  
+  .video-container video {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    scale: 1.4;
+  }
+
+  .contenedor-circulos {
+    position: relative; /* Posiciona los elementos de forma relativa */
+    width: 100%; /* Ajusta el ancho del contenedor */
+    height: 100%; /* Ajusta la altura del contenedor */
+  }
+  
+  .circulo-blanco {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute; 
+    width: 12vw; /* Ajusta el diámetro del círculo blanco */
+    height: 12vw; /* Ajusta el diámetro del círculo blanco */
+    border: 0.7vh solid rgba(255, 255, 255, 0.7); /* Crea un borde blanco sólido */
+    border-radius: 50%; /* Crea la forma circular */
+    background-position: center;
+  }
+  
+  .play{
+    width: 5vw; 
+    height: 5vw;
+    fill:  rgba(255, 255, 255, 0.7); /* Crea un borde blanco sólido */
+  }
+
+  .circulo-punteado {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute; /* Posiciona el círculo punteado de forma absoluta */
+    transform: translate(-50%, -50%); /* Compensa la posición del centro */
+    width: 15vw; /* Ajusta el diámetro del círculo punteado */
+    height: 15vw; /* Ajusta el diámetro del círculo punteado */
+    border: 0.5vh dashed rgba(255, 255, 255, 0.7); /* Crea un borde punteado gris */
+    border-radius: 50%; /* Crea la forma circular */  
+    animation: rotation 8s linear infinite;  
+  }
+
+  
+  @keyframes rotation {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+
+  .posicion-arriba-derecha{
+    top: 58vw; 
+    left: 20vw; 
+    z-index: 1;
+  }
+
+  .posicion-arriba-centro{
+    top: 75vw; 
+    left: 48vw;     
+    z-index: 1;
+  }
+
+  .posicion-arriba-izquierda{
+    top: 82vw; 
+    left: 68vw;     
+    z-index: 1;
+  }
+
+  .posicion-abajo-derecha{
+    bottom: 70vw; 
+    left: 13vw; 
+    z-index: 1;
+  }
+
+  .posicion-abajo-centro{
+    bottom: 70vw; 
+    left: 40vw;     
+    z-index: 1;
+  }
+
+  .posicion-abajo-izquierda{
+    bottom: 49vw; 
+    left: 55vw;     
+    z-index: 1;
+  }
+
+  #contenedor-video { 
+    position: fixed; /* Fija el video en la posición */
+    background-color: #FECA19;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 10; /* Coloca el video detrás de todos los elementos */
+  }
+  #logo-video{
+    position: absolute;
+    top: 5vh;
+    left: 25vw;
+    width: 50%;
+    height: auto;
+  }
+
+  #mi-video {
+    position: absolute;
+    top: 35vh;
+    left: 0;
+    width: 100%;
+    height: auto;
+    object-fit: cover; /* Ajusta el video para cubrir todo el contenedor */
+  }
